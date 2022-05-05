@@ -1,0 +1,14 @@
+{
+    "files.associations": {
+        "stdio.h": "c",
+        "iostream": "cpp",
+        "*.tcc": "cpp",
+        "stack": "cpp",
+        "queue": "cpp",
+        "algorithm": "cpp",
+        "list": "cpp",
+        "vector": "cpp",
+        "bitset": "cpp",
+        "chrono": "cpp"
+    }
+}
