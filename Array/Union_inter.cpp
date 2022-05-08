@@ -21,12 +21,6 @@ void printUnion(int arr1[], int arr2[], int m, int n)
         m = n;
         n = temp;
     }
-
-    // Now arr1[] is smaller
-
-    // Sort the first array and print its elements (these
-    // two steps can be swapped as order in output is not
-    // important)
     sort(arr1, arr1 + m);
     for (int i = 0; i < m; i++)
         cout << arr1[i] << " ";

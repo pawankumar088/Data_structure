@@ -1,25 +1,24 @@
 #include <stdio.h>
-#include <string.h>
-int main()
+#define ARRAY_SIZE(a) sizeof(a) / sizeof(a[0])
+void findPair(int arr[], int n, int sum)
 {
-    // Counter variable to store the count of vowels and consonant
-    int i, vCount = 0, cCount = 0;
-    char str[] = "This is a really simple sentence";
-    for (i = 0; i < strlen(str); i++)
+    int i, j;
+    int countPair = 0;
+    for (i = 0; i < n; i++)
     {
-        str[i] = tolower(str[i]);
-        if (str[i] == 'a' || str[i] == 'e' || str[i] == 'i' || str[i] == 'o' || str[i] == 'u')
+        for (j = i + 1; j < n; j++)
         {
-            // Increments the vowel counter
-            vCount++;
-        }
-        else if (str[i] >= 'a' && str[i] <= 'z')
-        {
-            // Increments the consonant counter
-            cCount++;
+            if (arr[i] + arr[j] == sum)
+            {
+                printf("%d %d ", arr[i], arr[j]);
+            }
         }
     }
-    printf("Number of vowels : %d\n", vCount);
-    printf("Number of consonant : %d", cCount);
+}
+int main()
+{
+    int arr[] = {1, 5, 7, -1, 5};
+    int sum = 6;
+    findPair(arr, 5, 6);
     return 0;
 }
