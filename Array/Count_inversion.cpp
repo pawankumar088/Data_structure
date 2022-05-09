@@ -1,7 +1,7 @@
 // C++ program to Count
 // Inversions in an array
 // using Merge Sort
-#include <bits/stdc++.h>
+#include <iostream>
 using namespace std;
 
 int _mergeSort(int arr[], int temp[], int left, int right);
@@ -25,6 +25,7 @@ int _mergeSort(int arr[], int temp[], int left, int right)
     int mid, inv_count = 0;
     if (right > left)
     {
+        
         /* Divide the array into two parts and
         call _mergeSortAndCountInv()
         for each of the parts */
@@ -97,3 +98,31 @@ int main()
 }
 
 // This is code is contributed by rathbhupendra
+// C++ program to Count Inversions
+// in an array
+/* #include <iostream>
+using namespace std;
+
+int getInvCount(int arr[], int n)
+{
+    int inv_count = 0;
+    for (int i = 0; i < n - 1; i++)
+        for (int j = i + 1; j < n; j++)
+            if (arr[i] > arr[j])
+                inv_count++;
+
+    return inv_count;
+}
+
+// Driver Code
+int main()
+{
+    int arr[] = {1, 20, 6, 4, 5};
+    int n = sizeof(arr) / sizeof(arr[0]);
+    cout << " Number of inversions are "
+         << getInvCount(arr, n);
+    return 0;
+}
+ */
+// This code is contributed
+// by Akanksha Rai

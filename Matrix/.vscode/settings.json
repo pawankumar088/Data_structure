@@ -4,6 +4,7 @@
         "algorithm": "cpp",
         "random": "cpp",
         "iostream": "cpp",
-        "stdbool.h": "c"
+        "stdbool.h": "c",
+        "ostream": "cpp"
     }
 }
