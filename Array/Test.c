@@ -1,24 +1,40 @@
 #include <stdio.h>
-#define ARRAY_SIZE(a) sizeof(a) / sizeof(a[0])
-void findPair(int arr[], int n, int sum)
+#include <string.h>
+#include <math.h>
+#include <stdlib.h>
+
+// Complete the following function.
+
+int marks_summation(int *marks, int number_of_students, char gender)
 {
-    int i, j;
-    int countPair = 0;
-    for (i = 0; i < n; i++)
+    // Write your code here.
+    int sum = 0, i = 0;
+    for (i = (gender == 'g' ? 1 : 0); i < number_of_students; i = i + 2)
     {
-        for (j = i + 1; j < n; j++)
-        {
-            if (arr[i] + arr[j] == sum)
-            {
-                printf("%d %d ", arr[i], arr[j]);
-            }
-        }
+        sum += *(marks + i);
     }
+
+    return sum;
 }
+
 int main()
 {
-    int arr[] = {1, 5, 7, -1, 5};
-    int sum = 6;
-    findPair(arr, 5, 6);
+    int number_of_students;
+    char gender;
+    int sum;
+
+    scanf("%d", &number_of_students);
+    int *marks = (int *)malloc(number_of_students * sizeof(int));
+
+    for (int student = 0; student < number_of_students; student++)
+    {
+        scanf("%d", (marks + student));
+    }
+
+    scanf(" %c", &gender);
+    sum = marks_summation(marks, number_of_students, gender);
+    printf("%d", sum);
+    free(marks);
+
     return 0;
 }

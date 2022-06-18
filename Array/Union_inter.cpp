@@ -1,12 +1,9 @@
-// A C++ program to print union and intersection
-/// of two unsorted arrays
 #include <algorithm>
 #include <iostream>
 using namespace std;
 
 int binarySearch(int arr[], int l, int r, int x);
 
-// Prints union of arr1[0..m-1] and arr2[0..n-1]
 void printUnion(int arr1[], int arr2[], int m, int n)
 {
     // Before finding union, make sure arr1[0..m-1]

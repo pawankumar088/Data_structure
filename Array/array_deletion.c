@@ -22,7 +22,7 @@ void indDeletion(int arr[], int size, int index)
 int main()
 {
     int arr[100] = {7, 8, 12, 27, 88};
-    int size = 5, element = 45, index = 2;
+    int size = 5, element = 45, index = 0;
     display(arr, size);
     indDeletion(arr, size, index);
     size -= 1;

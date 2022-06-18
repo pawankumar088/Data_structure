@@ -2,10 +2,13 @@
 
 int main()
 {
-    int arr[] = {1, 2, 3, 5, 5};
+    // Initialize array
+    int arr[] = {1, 2, 8, 3, 2, 2, 2, 5, 1};
 
+    // Calculate length of array arr
     int length = sizeof(arr) / sizeof(arr[0]);
 
+    // Array fr will store frequencies of element
     int fr[length];
     int visited = -1;
 
@@ -21,15 +24,11 @@ int main()
                 fr[j] = visited;
             }
         }
-        // 1 2 3 5 5;
-
         if (fr[i] != visited)
-        {
-
             fr[i] = count;
-        }
     }
 
+    // Displays the frequency of each element present in array
     printf("---------------------\n");
     printf(" Element | Frequency\n");
     printf("---------------------\n");

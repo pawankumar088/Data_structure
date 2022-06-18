@@ -18,7 +18,6 @@ int iterativeBinarySearch(int array[], int low, int high, int element)
     }
     return -1;
 }
-}
 int main(void)
 {
     int array[] = {1, 4, 7, 9, 16, 56, 70};
