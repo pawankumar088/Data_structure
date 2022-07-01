@@ -1,6 +1,6 @@
 #include <iostream>
-#include <stack>
 #include <queue>
+#include <algorithm>
 using namespace std;
 class node
 {
@@ -13,22 +13,23 @@ public:
         next = NULL;
     }
 };
-void insertAtTail(node *&head, int val)
+void insertattail(node *&head, int key)
 {
-    node *n = new node(val);
+    node *n = new node(key);
+    node *temp = head;
     if (head == NULL)
     {
         head = n;
         return;
     }
-    node *temp = head;
+
     while (temp->next != NULL)
     {
         temp = temp->next;
     }
     temp->next = n;
 }
-void insertAthead(node *&head, int val)
+void insertathead(node *&head, int val)
 {
     node *n = new node(val);
     n->next = head;
@@ -42,28 +43,36 @@ void display(node *head)
         head = head->next;
     }
     cout << "NULL";
+    cout << endl;
 }
 bool search(node *head, int key)
 {
-    node *temp = head;
-    while (temp != NULL)
+    while (head != NULL)
     {
-        if (temp->data == key)
+        if (head->data == key)
         {
             return true;
         }
-        temp = temp->next;
+        head = head->next;
     }
     return false;
 }
 int main()
 {
     node *head = NULL;
-    insertAtTail(head, 34);
-    insertAtTail(head, 34);
-    insertAthead(head, 1);
-
-    cout << search(head, 32) << endl;
+    insertattail(head, 234);
+    insertattail(head, 4);
+    insertattail(head, 1);
+    insertathead(head, 34);
     display(head);
+    if (search(head, 234))
+    {
+        cout << "Present";
+    }
+    else
+    {
+        cout << "Not Present";
+    }
+
     return 0;
 }

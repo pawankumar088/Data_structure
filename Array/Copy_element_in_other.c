@@ -3,7 +3,7 @@
 int main()
 {
     int n;
-    printf("Enter number of array you  want to input and copy in othe array :");
+    printf("Enter number of array you  want to input and copy in other array :");
     scanf("%d", &n);
     int arr[n];
     for (int i = 0; i < n; i++)

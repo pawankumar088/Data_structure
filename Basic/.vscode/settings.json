@@ -9,6 +9,7 @@
         "list": "cpp",
         "vector": "cpp",
         "bitset": "cpp",
-        "chrono": "cpp"
+        "chrono": "cpp",
+        "cstring": "cpp"
     }
 }

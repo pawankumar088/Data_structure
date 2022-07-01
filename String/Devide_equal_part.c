@@ -2,7 +2,7 @@
 #include <string.h>
 int main()
 {
-    char str[] = "pawankuma";
+    char str[] = "pawankumaa";
 
     int i, counter, len = 0, n = 3, temp = 0, chars;
     len = strlen(str);

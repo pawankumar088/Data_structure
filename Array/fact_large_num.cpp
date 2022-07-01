@@ -9,7 +9,6 @@ void factorial(int n)
 {
     int res[MAX];
 
-    // Initialize result
     res[0] = 1;
     int res_size = 1;
 
@@ -58,6 +57,6 @@ int multiply(int x, int res[], int res_size)
 // Driver program
 int main()
 {
-    factorial(5);
+    factorial(999999999);
     return 0;
 }

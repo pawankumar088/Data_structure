@@ -1,10 +1,6 @@
 {
     "git.ignoreLimitWarning": true,
     "files.associations": {
-        "algorithm": "cpp",
-        "random": "cpp",
-        "iostream": "cpp",
-        "stdbool.h": "c",
-        "ostream": "cpp"
+        "algorithm": "cpp"
     }
 }

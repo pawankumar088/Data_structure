@@ -2,8 +2,7 @@
     "git.ignoreLimitWarning": true,
     "files.associations": {
         "iostream": "cpp",
-        "bitset": "c",
-        "chrono": "c",
-        "algorithm": "c"
+        "random": "cpp",
+        "algorithm": "cpp"
     }
 }

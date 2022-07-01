@@ -51,6 +51,13 @@ void mergeSort(int A[], int low, int high)
         merge(A, mid, low, high);
     }
 }
+void printArray(int *arr, int n)
+{
+    for (int i = 0; i < n; i++)
+    {
+        printf("%d ", arr[i]);
+    }
+}
 
 int main()
 {
@@ -58,6 +65,7 @@ int main()
     int A[] = {9, 1, 4, 14, 4, 15, 6};
     int n = 7;
     printArray(A, n);
+    printf("\n");
     mergeSort(A, 0, 6);
     printArray(A, n);
     return 0;

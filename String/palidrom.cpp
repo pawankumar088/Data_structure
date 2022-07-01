@@ -1,29 +1,31 @@
 #include <iostream>
+#include <string>
+#include <cctype>
 using namespace std;
+
+string change_Case(string text)
+{
+
+    for (int x = 0; x < text.length(); x++)
+    {
+        if (isupper(text[x]))
+        {
+            text[x] = tolower(text[x]);
+        }
+        else
+        {
+            text[x] = toupper(text[x]);
+        }
+    }
+
+    return text;
+}
 
 int main()
 {
-    int n;
-    bool check = 1;
-    cin >> n;
-    char arr[n + 1];
-    cin >> arr;
-    for (int i = 0; i < n/2; i++)
-    {
-        if (arr[i] != arr[n - 1 - i])
-        {
-            check = 0;
-            break;
-        }
-    }
-    if (check)
-    {
-        cout << "Word is palidrom ";
-    }
-    else
-    {
-        cout << "Word is not palidrom";
-    }
 
+    cout << "Original string: Python, After changing cases-> " << change_Case("Python") << endl;
+    cout << "Original string: w3resource,  After changing cases-> " << change_Case("w3resource") << endl;
+    cout << "Original string: AbcdEFH Bkiuer,  After changing cases-> " << change_Case(" AbcdEFH Bkiuer") << endl;
     return 0;
 }

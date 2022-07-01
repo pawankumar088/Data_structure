@@ -2,12 +2,9 @@
 
 int main()
 {
-    // Initialize array
+
     int arr[] = {1, 2, 8, 3, 2, 2, 2, 5, 1};
-
-    // Calculate length of array arr
     int length = sizeof(arr) / sizeof(arr[0]);
-
     // Array fr will store frequencies of element
     int fr[length];
     int visited = -1;

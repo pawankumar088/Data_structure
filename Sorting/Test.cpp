@@ -1,32 +1,30 @@
 #include <iostream>
-#include <queue>
-#include <algorithm>
 using namespace std;
 
+int countDistinct(int arr[], int n)
+{
+    int res = 1;
+
+    // Pick all elements one by one
+    for (int i = 1; i < n; i++)
+    {
+        int j = 0;
+        for (j = 0; j < i; j++)
+            if (arr[i] == arr[j])
+                break;
+
+        // If not printed earlier, then print it
+        if (i == j)
+            res++;
+    }
+    return res;
+}
+
+// Driver program to test above function
 int main()
 {
-    int n;
-    cin >> n;
-    int arr[n];
-    for (int i = 0; i < n; i++)
-    {
-        cin >> arr[i];
-    }
-    for (int i = 0; i < n - 1; i++)
-    {
-        for (int j = 0; j < n - 1 - i; j++)
-        {
-            if (arr[j] > arr[j + 1])
-            {
-                swap(arr[j], arr[j + 1]);
-            }
-        }
-    }
-
-    for (int i = 0; i < n; i++)
-    {
-        cout << arr[i] << " ";
-    }
-
+    int arr[] = {12, 10, 9, 45, 2, 10, 10, 45};
+    int n = sizeof(arr) / sizeof(arr[0]);
+    cout << countDistinct(arr, n);
     return 0;
 }

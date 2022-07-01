@@ -16,7 +16,7 @@ bool subArrayExists(int arr[], int n)
         if (sum == 0 || sumSet.find(sum) != sumSet.end())
             return true;
 
-        sumSet.insert(sum);
+ sumSet.insert(sum);
     }
     return false;
 }

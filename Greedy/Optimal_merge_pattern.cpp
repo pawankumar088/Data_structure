@@ -1,30 +1,34 @@
 #include <bits/stdc++.h>
 using namespace std;
-#define int long long
-signed main()
+int main()
 {
-    int n;
-    cin >> n;
-    vector<int> a(n);
-    return 0;
-    for (int i = 0; i < n; i++)
+
+    int size;
+    cin >> size;
+    int arr[size];
+    for (int i = 0; i < size; i++)
     {
-        cin >> a[i];
+        cin >> arr[i];
     }
     priority_queue<int, vector<int>, greater<int>> minheap;
-    for (int i = 0; i < n; i++)
+
+    for (int i = 0; i < size; i++)
     {
-        minheap.push(a[i]);
+        minheap.push(arr[i]);
     }
+
     int ans = 0;
+
     while (minheap.size() > 1)
     {
-        int e1 = minheap.top();
+
+        int a = minheap.top();
         minheap.pop();
-        int e2 = minheap.top();
+        int b = minheap.top();
         minheap.pop();
-        ans += e1 + e2;
-        minheap.push(e2 + e2);
+        ans += a + b;
+        minheap.push(a+b);
     }
     cout << ans;
+    return 0;
 }

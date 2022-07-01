@@ -22,6 +22,7 @@ int main()
             scanf("%d", &matrix[i][j]);
         }
     }
+
     printf("\nMatrix is :\n");
     for (i = 0; i < r; i++)
     {

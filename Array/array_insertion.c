@@ -1,4 +1,4 @@
-/* #include <stdio.h>
+#include <stdio.h>
 void display(int arr[], int n)
 {
     for (int i = 0; i < n; i++)
@@ -26,4 +26,3 @@ int main()
     display(arr, size);
     return 0;
 }
- */

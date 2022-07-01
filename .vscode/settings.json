@@ -1,6 +1,18 @@
 {
     "files.associations": {
-        "new": "cpp",
-        "iostream": "cpp"
-    }
+        "stdio.h": "c",
+        "stdbool.h": "c",
+        "stdlib.h": "c"
+    },
+    "C_Cpp.errorSquiggles": "Disabled",
+    "git.ignoreLimitWarning": true,
+    "python.testing.unittestArgs": [
+        "-v",
+        "-s",
+        "./Stack",
+        "-p",
+        "*test.py"
+    ],
+    "python.testing.pytestEnabled": false,
+    "python.testing.unittestEnabled": true
 }

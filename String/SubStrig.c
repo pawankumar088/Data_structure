@@ -11,7 +11,7 @@ int main()
         {
             for (int k = i; k <= j; k++)
             {
-                printf("%%d", arr[k]);
+                printf("%c", arr[k]);
             }
             printf("\n");
         }

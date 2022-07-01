@@ -3,7 +3,7 @@
 
 int main()
 {
-    char string[] = "Great responsibility";
+    char string[] = "pawan";
     int count;
 
     printf("Duplicate characters in a given string: \n");

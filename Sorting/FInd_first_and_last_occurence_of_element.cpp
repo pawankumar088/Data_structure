@@ -1,11 +1,11 @@
 #include <iostream>
-#include <stack>
 #include <queue>
+#include <algorithm>
 using namespace std;
-void find(int *arr, int size, int key)
+void check(int *arr, int n, int key)
 {
     int first = -1, last = -1;
-    for (int i = 0; i < size; i++)
+    for (int i = 0; i < n; i++)
     {
         if (arr[i] != key)
         {
@@ -17,13 +17,12 @@ void find(int *arr, int size, int key)
         }
         last = i;
     }
-    cout << "first " << first << " " << endl
-         << "Second :" << last;
+    cout << first + 1 << " " << last + 1;
 }
 int main()
 {
-    int n;
-    int arr[] = {3, 3, 3, 3, 3, 3, 3};
-    find(arr, 7, 3);
+    string s;
+    int arr[] = {12, 2, 3, 1, 2, 1};
+    check(arr, 6, 1);
     return 0;
 }

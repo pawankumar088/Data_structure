@@ -74,3 +74,24 @@ void main()
 //     sumofarray(a, n);
 //     return 0;
 // }
+
+#include <iostream>
+#include <queue>
+#include <algorithm>
+using namespace std;
+
+int main()
+{
+    string s;
+    int arr[] = {1, 2, 3, 4, 5, 6, 7};
+    int minNo = INT_MAX;
+    int maxNo = INT_MIN;
+    for (int i = 0; i < 7; i++)
+    {
+        minNo = min(minNo, arr[i]);
+        maxNo = max(maxNo, arr[i]);
+    }
+    cout << minNo << " " << maxNo;
+
+    return 0;
+}

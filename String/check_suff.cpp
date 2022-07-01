@@ -1,4 +1,29 @@
 #include <iostream>
+#include <queue>
+#include <algorithm>
+using namespace std;
+
+int main()
+{
+    string s, s2;
+    s = "pxxxx";
+    s2 = "pxxxx";
+    if (s.length() != s2.length())
+    {
+        cout << "Length is not equal";
+    }
+    else
+    {
+        if (s == s2)
+        {
+            cout << "This is suffle of each other ";
+        }
+    }
+
+    return 0;
+}
+
+/* #include <iostream>
 #include <algorithm>
 using namespace std;
 
@@ -62,3 +87,4 @@ int main()
     cout << endl;
     return 0;
 }
+ */

@@ -1,5 +1,5 @@
 #include <stdio.h>
-#include <stdlib.h>
+
 // Represent a node of the singly linked list
 struct node
 {
@@ -51,7 +51,7 @@ void reverse(struct node *current)
             printf("%d ", current->data);
             return;
         }
-        // Recursively calls the reverse function|
+        // Recursively calls the reverse function
         reverse(current->next);
         printf("%d ", current->data);
     }
@@ -94,3 +94,4 @@ int main()
 
     return 0;
 }
+Output:

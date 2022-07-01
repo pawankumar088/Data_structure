@@ -1,12 +1,8 @@
-// C++ program to Count
-// Inversions in an array
-// using Merge Sort
 #include <iostream>
 using namespace std;
 
 int _mergeSort(int arr[], int temp[], int left, int right);
-int merge(int arr[], int temp[], int left, int mid,
-          int right);
+int merge(int arr[], int temp[], int left, int mid,int right);
 
 /* This function sorts the
 input array and returns the

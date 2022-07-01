@@ -9,6 +9,7 @@ void rotet(int *arr, int n)
     }
     arr[0] = x;
 }
+//Also this can be perform by swaping last and first element
 int main()
 {
     int n;
