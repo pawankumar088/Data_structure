@@ -1,47 +1,23 @@
-/* #include <iostream>
+#include <iostream>
+#include <queue>
+#include <algorithm>
 using namespace std;
+
 int main()
 {
     int n;
-    cin >> n;
-    int arr[n];
-    for (int i = 0; i < n; i++)
+    int arr[5] = {1, 2, 3, 3, 4};
+    int ans = 0;
+    for (int i = 0; i < 5; i++)
     {
-        cin >> arr[i];
+        ans = ans ^ arr[i];
     }
-    for (int i = 0; i < n; i++)
+        cout << ans;
+    for (int i = 1; i < 5; i++)
     {
-        for (int j = i + 1; j < n; j++)
-        {
-            if (arr[i] == arr[j])
-            {
-                cout << arr[j] << " ";
-            }
-        }
+        ans = ans ^ i;
     }
-    return 0;
-}
- */
-#include <iostream>
-using namespace std;
-void printRepeating(int arr[], int n)
-{
-    for (int i = 0; i < n; i++)
-    {
-        int index = arr[i] % n;
-        arr[index] += n;
-    }
-    for (int i = 0; i < n; i++)
-    {
-        if ((arr[i] / n) >= 2)
-            cout << i << " ";
-    }
-}
-int main()
-{
-    int arr[] = {1, 6, 3, 1, 3, 6, 6};
-    int arr_size = sizeof(arr) / sizeof(arr[0]);
-    cout << "The repeating elements are: \n";
-    printRepeating(arr, arr_size);
+    cout << ans;
+
     return 0;
 }

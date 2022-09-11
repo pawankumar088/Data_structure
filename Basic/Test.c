@@ -1,31 +1,27 @@
 #include <stdio.h>
-
-// Main function to run the program
+#include <math.h>
 int main()
 {
-    int arr[] = {21, 30, 10, 2, 10, 20, 30, 11};
-    int n = sizeof(arr) / sizeof(arr[0]);
+   int num = 175, sum = 0, rem = 0, n, pow = 1;
+   int len = calculateLength(num);
 
-    int visited[n];
+   n = num;
+   while (num > 0)
+   {
+      rem = num % 10;
+      for (int i = 0; i < len; i++)
+      {
+         pow = pow * rem;
+      }
+      sum = sum + pow;
+      num = num / 10;
+      len--;
+      pow = 1;
+   }
+   if (sum == n)
+      printf("%d is a disarium number", n);
+   else
+      printf("%d is not a disarium number", n);
 
-    for (int i = 0; i < n; i++)
-    {
-
-        if (visited[i] == 0)
-        {
-            int count = 1;
-            for (int j = i + 1; j < n; j++)
-            {
-                if (arr[i] == arr[j])
-                {
-                    count++;
-                    visited[j] = 1;
-                }
-            }
-            if (count == 1)
-                printf("%d ", arr[i]);
-        }
-    }
-
-    return 0;
+   return 0;
 }

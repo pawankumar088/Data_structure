@@ -30,3 +30,4 @@ int main()
          << findMinDiff(arr, n, m);
     return 0;
 }
+

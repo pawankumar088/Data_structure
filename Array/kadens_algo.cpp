@@ -6,7 +6,7 @@ int main()
 {
     int n;
     int maxarr = INT_MIN;
-    int sum = 1;
+    int sum = 0;
     cin >> n;
     int arr[n];
     for (int i = 0; i < n; i++)
@@ -16,7 +16,7 @@ int main()
 
     for (int i = 0; i < n; i++)
     {
-        sum *= arr[i];
+        sum += arr[i];
         if (sum < 0)
         {
             sum = 0;

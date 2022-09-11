@@ -18,25 +18,7 @@ void main()
         scanf("%d", &array1[i]);
     }
 
-    min = array1[0];
-
-    max = array1[0];
-
-    for (i = 0; i < size; i++)
-
-    {
-        // 5  2 5 6 9
-
-        if (array1[i] < min)
-        {
-                    
-            min = array1[i];
-        }
-        if (array1[i] > max)
-        {
-            max = array1[i];
-        }
-    }
+ 
 
     printf(" \nThe maximum element in array is %d", max);
 

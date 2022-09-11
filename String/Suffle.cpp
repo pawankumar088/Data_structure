@@ -7,14 +7,16 @@ int main()
 {
     string s = "125";
     string s2 = "PRQ";
-    string res = "P1Q2R3";
+    string res = "125PRQ";
     int n = s.length();
     int m = s2.length();
     int r = res.length();
-    sort(s.begin(), s.end());
-    sort(s2.begin(), s2.end());
-    sort(res.begin(), res.end());
-    int i = 0, j = 0, k = 0;
+    /*     sort(s.begin(), s.end());
+        sort(s2.begin(), s2.end());   This will use when order is not necessary
+        sort(res.begin(), res.end());
+     */
+    int i = 0,
+        j = 0, k = 0;
     while (k < r)
     {
         if ((n + m) != r)
@@ -25,13 +27,9 @@ int main()
         else
         {
             if (i < n && s[i] == res[k])
-            {
                 i++;
-            }
             else if (j < m && s2[j] == res[k])
-            {
                 j++;
-            }
             else
             {
                 cout << "No";

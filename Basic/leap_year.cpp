@@ -16,7 +16,7 @@ int main()
     else if (year % 4 == 0 && year % 100 != 0)
     {
         cout << "Yes"
-             << endl;
+             << endl; 
     }
     else
     {

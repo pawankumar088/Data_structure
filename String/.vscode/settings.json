@@ -5,6 +5,8 @@
         "string_view": "cpp",
         "regex": "cpp",
         "ostream": "cpp",
-        "*.tcc": "cpp"
+        "*.tcc": "cpp",
+        "queue": "cpp",
+        "vector": "cpp"
     }
 }

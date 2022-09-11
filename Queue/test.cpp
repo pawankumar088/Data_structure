@@ -1,18 +1,11 @@
 #include <iostream>
+#include <queue>
+#include <algorithm>
 using namespace std;
 
 int main()
 {
-    int n;
-    cin >> n;
-    while (n--)
-    {
-        int size;
-        cin >> size;
-        string str;
-        cin >> str;
-        
-    }
-
+    string s;
+    cout << "How are you ";
     return 0;
 }

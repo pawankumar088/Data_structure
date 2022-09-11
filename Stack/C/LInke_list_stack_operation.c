@@ -8,6 +8,7 @@ struct Node
 };
 
 struct Node *top = NULL;
+-<>
 void linkedListTraversal(struct Node *ptr)
 {
     while (ptr != NULL)
@@ -59,7 +60,7 @@ struct Node *push(struct Node *top, int x)
 }
 
 int pop(struct Node *tp)
-{
+{  
     if (isEmpty(tp))
     {
         printf("Stack Underflow\n");

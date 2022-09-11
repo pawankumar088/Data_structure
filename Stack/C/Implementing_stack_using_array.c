@@ -18,7 +18,7 @@ int isEmpty(struct stack *ptr)
     {
         return 0;
     }
-}+
+}
 
 int isFull(struct stack *ptr)
 {

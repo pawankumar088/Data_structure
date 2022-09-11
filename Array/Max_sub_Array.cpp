@@ -18,6 +18,7 @@ int main()
                 sum += arr[k];
                 cout << sum << " ";
             }
+            cout << endl;
             maxg = max(sum, maxg);
         }
     }

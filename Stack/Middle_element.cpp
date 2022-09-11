@@ -1,7 +1,7 @@
-#include <bits/stdc++.h>
+#include <iostream>
 using namespace std;
 
-class myStack
+class stack
 {
     struct Node
     {
@@ -108,16 +108,12 @@ public:
 
 int main()
 {
-    myStack st;
+    stack st;
     st.push(11);
     st.push(22);
     st.push(33);
     st.push(44);
     st.push(55);
-    st.pop();
-    st.pop();
-    st.pop();
-    cout << st.findMiddle() << endl;
     cout << st.findMiddle() << endl;
     return 0;
 }

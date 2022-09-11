@@ -1,0 +1,1 @@
+{"name":"Local: Test","url":"c:\\Users\\HP\\Desktop\\Data structure\\STL\\Test.cpp","tests":[{"id":1657362828049,"input":"4\n10 100 200\n3 10 100\n1000 1000 2200\n100 100 100","output":"20000\n300\n2040000\n10000"}],"interactive":false,"memoryLimit":1024,"timeLimit":3000,"srcPath":"c:\\Users\\HP\\Desktop\\Data structure\\STL\\Test.cpp","group":"local","local":true}

@@ -1,22 +1,18 @@
-#include <bits/stdc++.h>
-#define n 20
-
+#include <iostream>
 using namespace std;
-class queue
-{
-    int *arr;
-    int ront;
-    int back;
 
-public:
-    queue()
-    {
-        arr = new int[n];
-    }
-};
 int main()
 {
     int n;
+    cin >> n;
+    while (n--)
+    {
+        int size;
+        cin >> size;
+        string str;
+        cin >> str;
+        
+    }
 
     return 0;
 }

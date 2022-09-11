@@ -1,31 +1,50 @@
-// C++ program to find Maximum Product Subarray
 #include <iostream>
 using namespace std;
-
-/* Returns the product of max product subarray.*/
 int maxSubarrayProduct(int arr[], int n)
 {
-    // Initializing result
+    int Max = arr[0];
+    int Min = arr[0];
+    int ans = arr[0];
+    for (int i = 1; i < n; i++)
+    {
+        if(arr[i]<0){
+            swap(Max, Min);
+        }
+        Max = max(arr[i], Max * arr[i]);
+        Min = min(arr[i], Min * arr[i]);
+        ans = max(ans, Max);
+    }
+    return ans;
+}
+
+int main()
+{
+    int arr[] = {2, 3, -2, 4};
+    int n = sizeof(arr) / sizeof(arr[0]);
+    cout << "Maximum Sub array product is "
+         << maxSubarrayProduct(arr, n);
+    return 0;
+}
+
+/* #include <iostream>
+using namespace std;
+int maxSubarrayProduct(int arr[], int n)
+{
     int result = arr[0];
 
     for (int i = 0; i < n; i++)
     {
         int mul = arr[i];
-        // traversing in current subarray
         for (int j = i + 1; j < n; j++)
         {
-            // updating result every time
-            // to keep an eye over the maximum product
             result = max(result, mul);
             mul *= arr[j];
         }
-        // updating the result for (n-1)th index.
         result = max(result, mul);
     }
     return result;
 }
 
-// Driver code
 int main()
 {
     int arr[] = {6, -3, -10, 0, 2};
@@ -35,4 +54,4 @@ int main()
     return 0;
 }
 
-// This code is contributed by yashbeersingh42
+ */
