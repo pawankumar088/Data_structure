@@ -6,7 +6,6 @@ using namespace std;
 int main()
 {
     int t;
-    string s;
     cin >> t;
     int count = 0;
     while (t)

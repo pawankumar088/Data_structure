@@ -1,43 +1,36 @@
 #include <iostream>
+#include <cmath>
+#include <algorithm>
 using namespace std;
+
 int main()
 {
-    char str1[100], str2[100];
-    int first[26] = {0}, second[26] = {0}, c = 0, flag = 0;
-    cout << "Enter First String: ";
-    gets(str1);
-    cout << "Enter Second String: ";
-    gets(str2);
+    int n;
+    cin >> n;
+    int n1 = n;
+    int n2 = n;
+    int count = 0;
 
-    // Calculating frequencies of characters in first string.
-    while (str1[c] != '\0')
+    while (n)
     {
-        first[str1[c] - 'a']++;
-        c++;
+        n /= 10;
+        count++;
     }
-
-    c = 0;
-    // Calculating frequencies of characters in second string.
-    while (str2[c] != '\0')
+    int sum = 0;
+    while (n1)
     {
-        second[str2[c] - 'a']++;
-        c++;
+        int rem = n1 % 10;
+        sum += pow(rem, count);
+        n1 /= 10;
     }
-    // Checking if frequencies of both the strings are same or not.
-    for (c = 0; c < 26; c++)
+    if (n2 == sum)
     {
-        if (first[c] != second[c])
-            flag = 1;
-    }
-
-    // Priting result.
-    if (flag == 0)
-    {
-        cout << "Strings are anagram.";
+        cout << "ANAGRAM" << endl;
     }
     else
     {
-        cout << "Strings are not anagram.";
+        cout << "NO" << endl;
     }
+
     return 0;
 }

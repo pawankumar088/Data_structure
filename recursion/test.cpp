@@ -1,24 +1,22 @@
-#include <stdio.h>
+#include <iostream>
+#include <queue>
+#include <algorithm>
+using namespace std;
 
-int findGCD(int num1, int num2);
 int main()
 {
-    int num1, num2, gcd;
-    scanf("%d", &num1);
-    scanf("%d", &num2);
-    gcd = findGCD(num1, num2);
-    printf("\n The GCD of %d and %d is: %d\n\n", num1, num2, gcd);
-    return 0;
-}
-
-int findGCD(int a, int b)
-{
-    while (a != b)
+    int n;
+    cin >> n;
+    int n1 = 0, n2 = 1;
+    cout << n1 << " "
+         << n2;
+    for (int i = 2; i < n; i++)
     {
-        if (a > b)
-            return findGCD(a - b, b);
-        else
-            return findGCD(a, b - a);
+        int n3 = n1 + n2;
+        cout << n3 << " ";
+        n1 = n2;
+        n2 = n3;
     }
-    return a;
+
+    return 0;
 }

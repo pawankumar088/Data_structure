@@ -1,20 +1,21 @@
 #include <iostream>
 #include <stack>
 using namespace std;
-bool isBalancedExp(string exp)
+bool isBalancedExp(string s)
 {
     stack<char> stk;
     char x;
-    for (int i = 0; i < exp.length(); i++)
+    for (int i = 0; i < s.length(); i++)
     {
-        if (exp[i] == '(' || exp[i] == '[' || exp[i] == '{')
+        if (s[i] == '(' || s[i] == '[' || s[i] == '{')
         {
-            stk.push(exp[i]);
+            stk.push(s[i]);
             continue;
         }
+        
         if (stk.empty())
             return false;
-        switch (exp[i])
+        switch (s[i])
         {
         case ')':
             x = stk.top();
@@ -40,7 +41,7 @@ bool isBalancedExp(string exp)
 }
 int main()
 {
-    string expresion = "()[(){()}]";
+    string expresion = "()[]{}";
     if (isBalancedExp(expresion))
         cout << "This is Balanced Expression";
     else
