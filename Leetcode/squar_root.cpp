@@ -5,6 +5,8 @@ using namespace std;
 
 int main()
 {
-    int n = 8;
-
+    string s = "a";
+    int n = stoi(s);
+    cout << n;
+    return 0;
 }
