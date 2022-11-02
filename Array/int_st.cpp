@@ -11,7 +11,7 @@ int main()
     num = stoi(str);
     num1 = stoi(str1);
     int sum = num * num1;
-    // cout << sum;
+    cout << sum << endl;
     int a = 23;
     string pawan = to_string(a);
     cout << pawan;
